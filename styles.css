@@ -1,13 +1,18 @@
 :root {
   --font-family-heading: "Google Sans";
   --font-family-text: "Inter";
+  --font-color: #fff;
+  --transition: all 0.3s ease-in-out;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
   font-family: var(--font-family-text);
+  color: var(--font-color);
   background-image: url("resources/Background.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,4 +28,52 @@ h1,
 h2,
 h3 {
   font-family: var(--font-family-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 30px;
+  padding: 10px 0;
+  transition: var(--transition);
+}
+
+.box-nav-link:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  font-size: 1.1rem;
+}
+
+.nav-link-active {
+  background: #dbdbdb;
+  color: #000;
 }
