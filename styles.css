@@ -70,10 +70,44 @@ header {
 }
 
 .nav-link:hover {
-  font-size: 1.1rem;
+  background: #dbdbdb;
 }
 
 .nav-link-active {
-  background: #dbdbdb;
-  color: #000;
+  background: #000;
+  color: #fff;
+}
+
+.nav-link-active:hover {
+  background: #000;
+  color: #fff;
+}
+
+main {
+  display: flex;
+}
+
+.section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.content-box {
+  padding-top: 100px;
+  max-width: 1024px;
+}
+
+.heading-main {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.text-main {
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  font-weight: 400;
 }
