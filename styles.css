@@ -1,11 +1,23 @@
+:root {
+  --font-family-heading: "Google Sans";
+  --font-family-text: "Inter";
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: var(--font-family-text);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-heading);
 }
