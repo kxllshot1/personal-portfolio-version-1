@@ -41,7 +41,7 @@ li {
 
 header {
   width: 100%;
-  height: 110px;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,11 +56,6 @@ header {
   transition: var(--transition);
 }
 
-.box-nav-link:hover {
-  background: #fff;
-  color: #000;
-}
-
 .nav-link {
   padding: 10px 20px;
   font-size: 1rem;
@@ -70,7 +65,12 @@ header {
 }
 
 .nav-link:hover {
-  background: #dbdbdb;
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+
+.nav-animate {
+  animation: addSpecialHover 4s ease-in-out infinite;
 }
 
 .nav-link-active {
@@ -94,20 +94,97 @@ main {
   flex-shrink: 0;
 }
 
+#about .content-box {
+  position: relative;
+}
+
+.box-frontend-definition {
+  width: 400px;
+  height: 200px;
+  padding: 30px;
+  background: #fff;
+  color: #000;
+  position: absolute;
+  top: 12%;
+  right: 15%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-definition-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.dev-role:hover {
+  text-decoration: underline;
+}
+
 .content-box {
-  padding-top: 100px;
+  padding-top: 200px;
   max-width: 1024px;
 }
 
 .heading-main {
   font-size: 3rem;
   margin-bottom: 30px;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -1px;
+  animation: float 2s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .text-main {
   font-size: 1.2rem;
   letter-spacing: -1px;
+  line-height: 1.3;
   font-weight: 400;
+}
+
+.special-orange {
+  background: #fff;
+  color: rgb(255, 0, 0);
+  padding: 0 10px;
+}
+
+.hover-special:hover {
+  color: rgb(255, 0, 0);
+  background: #fff;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatOpp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes addSpecialHover {
+  50% {
+    background: #fff;
+    color: rgb(255, 0, 0);
+  }
+  100% {
+    background: none;
+    color: #fff;
+  }
 }
