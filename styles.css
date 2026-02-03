@@ -22,6 +22,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -85,7 +86,10 @@ header {
 
 main {
   display: flex;
+  justify-content: center;
   position: relative;
+  width: auto;
+  height: auto;
 }
 
 .section {
@@ -180,18 +184,21 @@ main {
   cursor: pointer;
 }
 
-#tools .content-box {
+#tools .content-box,
+#connect .content-box {
   text-align: center;
 }
 
-.list-tech-stack {
+.list-tech-stack,
+.list-socials {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
-.tech-stack-tool {
+.tech-stack-tool,
+.link-socials {
   font-size: 1.5rem;
   font-weight: 500;
   background: #fff;
@@ -200,8 +207,10 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
-.tech-stack-tool:hover {
+.tech-stack-tool:hover,
+.link-socials:hover {
   transform: translateY(5px);
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -220,6 +229,10 @@ main {
 .section-active {
   opacity: 1;
   pointer-events: all;
+}
+
+.img-social {
+  width: 25px;
 }
 
 @keyframes float {
@@ -255,5 +268,73 @@ main {
   100% {
     background: none;
     color: #fff;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box-definition {
+    display: none;
+  }
+  .content-box {
+    width: 850px;
+  }
+}
+
+@media (max-width: 850px) {
+  .content-box {
+    width: 550px;
+  }
+  .heading-main {
+    font-size: 2rem;
+  }
+  .text-main {
+    font-size: 1rem;
+  }
+  .tech-stack-tool,
+  .link-socials,
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    overflow-y: scroll;
+    height: auto;
+    background-image: url("resources/gradient-bg-phone.svg");
+  }
+  .content-box {
+    width: 100%;
+    padding: 250px 15px;
+  }
+  header {
+    display: none;
+  }
+  main {
+    position: initial;
+    flex-direction: column;
+  }
+  .section {
+    position: initial;
+    opacity: 1;
+    pointer-events: all;
+    width: 100vw;
+    /* height: 100vh; */
+  }
+}
+
+@media (max-width: 400px) {
+  .list-socials,
+  .list-tech-stack {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .heading-main {
+    font-size: 1.5rem;
+  }
+  .text-main,
+  .link-socials,
+  .tech-stack-tool {
+    font-size: 13px;
   }
 }
