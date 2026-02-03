@@ -85,6 +85,7 @@ header {
 
 main {
   display: flex;
+  position: relative;
 }
 
 .section {
@@ -92,24 +93,49 @@ main {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 #about .content-box {
   position: relative;
 }
 
-.box-frontend-definition {
+.box-definition {
   width: 400px;
-  height: 200px;
+  height: auto;
   padding: 30px;
   background: #fff;
   color: #000;
   position: absolute;
-  top: 12%;
-  right: 15%;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+.box-definition-tech {
+  top: 350px;
+}
+
+.box-definition-html {
+  left: 400px;
+}
+
+.box-definition-css {
+  left: 550px;
+}
+.box-definition-js {
+  left: 700px;
+}
+
+.box-frontend-definition {
+  top: 12%;
+  right: 15%;
 }
 
 .box-definition-active {
@@ -129,7 +155,7 @@ main {
 .heading-main {
   font-size: 3rem;
   margin-bottom: 30px;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: -1px;
   animation: float 2s ease-in-out infinite;
   cursor: pointer;
@@ -152,6 +178,48 @@ main {
   color: rgb(255, 0, 0);
   background: #fff;
   cursor: pointer;
+}
+
+#tools .content-box {
+  text-align: center;
+}
+
+.list-tech-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tech-stack-tool {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: #fff;
+  color: #000;
+  padding: 0 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.tech-stack-tool:hover {
+  transform: translateY(5px);
+  cursor: pointer;
+}
+
+.text-orange {
+  color: rgb(255, 0, 0);
+}
+
+.text-yellow {
+  color: rgb(255 167 0);
+}
+
+.text-blue {
+  color: rgb(0, 140, 255);
+}
+
+.section-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 @keyframes float {
@@ -181,6 +249,7 @@ main {
 @keyframes addSpecialHover {
   50% {
     background: #fff;
+
     color: rgb(255, 0, 0);
   }
   100% {

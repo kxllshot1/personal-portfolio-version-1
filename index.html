@@ -29,13 +29,13 @@
       </nav>
     </header>
     <main>
-      <section class="section" id="about">
+      <section class="section section-about section-active" id="about">
         <div class="content-box">
           <h1 class="heading-main">
-            Hey! I'm Talha,<br />a
+            Hey! I'm <span class="hover-special">Talha</span>,<br />a
             <span class="special-orange dev-role">Frontend Developer</span>
           </h1>
-          <div class="box-frontend-definition">
+          <div class="box-frontend-definition box-definition">
             <p class="text-definition">
               A frontend developer builds the user-facing, interactive parts of
               websites and applications using HTML, CSS, and JavaScript. They
@@ -61,7 +61,59 @@
           </p>
         </div>
       </section>
-      <section class="section" id="tools"></section>
+      <section class="section section-tools" id="tools">
+        <div class="content-box">
+          <h2 class="heading-main">The Tech Stack</h2>
+          <ul class="list-tech-stack">
+            <li class="tech-stack-tool" data-box="box-definition-html">
+              <span class="text-orange" data-box="box-definition-html"
+                >&lt;&gt;</span
+              >
+              HTML
+            </li>
+            <li class="tech-stack-tool" data-box="box-definition-css">
+              <span class="text-blue" data-box="box-definition-css">{}</span>
+              CSS
+            </li>
+            <li class="tech-stack-tool" data-box="box-definition-js">
+              <span class="text-yellow" data-box="box-definition-js">{}</span>
+              JavaScript
+            </li>
+          </ul>
+          <div class="box-definition box-definition-tech box-definition-html">
+            <p class="text-definition">
+              It is the standard language used to create and design the
+              structure of web pages. If you think of a website as a house, HTML
+              is the foundation and framing. It defines where the "rooms" are
+              and what they contain (text, images, or videos).<br />I use HTML
+              to define semantics and accessibility. It's not just about
+              "putting text on a page", it's about choosing the right tag for
+              the right job so that browsers and screen readers understand the
+              content and your site ranks well for accessibility.
+            </p>
+          </div>
+          <div class="box-definition box-definition-tech box-definition-css">
+            <p class="text-definition">
+              While HTML provides the structure of a webpage, CSS provides the
+              presentation. If HTML is the "skeleton" of a house, CSS is the
+              interior design: the paint on the walls, the choice of furniture,
+              the lighting, and the overall layout.<br />This is where I
+              transform a boring document into a branded experience. As a
+              frontend dev, I use CSS to handle layout, typography, and
+              responsiveness (making sure it works on an iPhone and a 4K
+              monitor).
+            </p>
+          </div>
+          <div class="box-definition box-definition-tech box-definition-js">
+            <p class="text-definition">
+              This is the "engine" under the hood.<br />This is where I make the
+              site smart. I use JavaScript to add functionality and
+              interactivity to the website, so that it actually feels alive and
+              drives results.
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="section" id="connect"></section>
     </main>
     <script src="script.js"></script>
